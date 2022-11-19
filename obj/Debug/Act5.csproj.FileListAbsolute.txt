@@ -1,0 +1,11 @@
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.csproj.AssemblyReference.cache
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.csproj.SuggestedBindingRedirects.cache
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.Properties.Resources.resources
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.WordStatistics.resources
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.csproj.GenerateResource.cache
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.csproj.CoreCompileInputs.cache
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\bin\Debug\Act5.exe.config
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\bin\Debug\Act5.exe
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\bin\Debug\Act5.pdb
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.exe
+C:\Users\jmdal\Projects\CST150\Topic3\Act5\obj\Debug\Act5.pdb
