@@ -14,6 +14,10 @@ namespace Act5
 
         private string filename;
         private List<string> words;
+        private string firstAlphaWord;
+        private string lastAlphaWord;
+        private string longestWord;
+        private string mostVowelsWord;
 
         public WordStatistics()
         {
@@ -53,6 +57,11 @@ namespace Act5
                 processButton.Enabled = false;
                 processButton.BackColor = Color.WhiteSmoke;
             }
+
+            firstAlphaTextBox.Text = "";
+            lastAlphaTextBox.Text = "";
+            longestTextBox.Text = "";
+            mostVowelsTextBox.Text = "";
         }
 
         // read words from file and clean data
@@ -64,6 +73,12 @@ namespace Act5
 
             try
             {
+                // append a whitespace char to the end of the input file
+                // this is to make sure we get the last word when looping
+                StreamWriter infile = File.AppendText(filename);
+                infile.WriteLine();
+                infile.Close();
+
                 // read each char individually and build next word
                 StreamReader inFile = File.OpenText(filename);
                 StringBuilder nextWord = new StringBuilder();
@@ -81,9 +96,9 @@ namespace Act5
                         words.Add(nextWord.ToString());
                         nextWord.Clear();
                     }
+                    
                     // else skip char
                 }
-                words.Add(nextWord.ToString());
                 inFile.Close();
             }
             catch (Exception ex)
@@ -122,12 +137,12 @@ namespace Act5
         {
             // sort alphabetically and update first and last
             words.Sort();
-            firstAlphaTextBox.Text = words.First();
-            lastAlphaTextBox.Text = words.Last();
+            firstAlphaWord = words.First();
+            lastAlphaWord = words.Last();
 
             // track running best for longest word and word with most vowels
-            string longestWord = words.First();
-            string mostVowelsWord = words.First();
+            longestWord = words.First();
+            mostVowelsWord = words.First();
             foreach(string word in words)
             {
                 if (word.Length > longestWord.Length)
@@ -141,7 +156,9 @@ namespace Act5
                 }
             }
 
-            // update longest word and word with most vowels
+            // update form results
+            firstAlphaTextBox.Text = firstAlphaWord;
+            lastAlphaTextBox.Text = lastAlphaWord;
             longestTextBox.Text = longestWord;
             mostVowelsTextBox.Text = mostVowelsWord;
         }
@@ -152,10 +169,10 @@ namespace Act5
             try
             {
                 StreamWriter outFile = File.CreateText("C:\\Users\\jmdal\\Projects\\CST150\\Topic3\\Act5\\rsrc\\out.txt");
-                foreach (string word in words)
-                {
-                    outFile.WriteLine(word);
-                }
+                outFile.WriteLine("The first word alphabetically is \"" + firstAlphaWord + "\".");
+                outFile.WriteLine("The last word alphabetically is \"" + lastAlphaWord + "\".");
+                outFile.WriteLine("The longest word is \"" + longestWord + "\".");
+                outFile.WriteLine("The word with the most vowels is \"" + mostVowelsWord + "\".");
                 outFile.Close();
             } catch (Exception ex)
             {

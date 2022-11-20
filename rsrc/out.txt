@@ -1,21 +1,4 @@
-a
-a
-and
-beast
-caged
-city
-dogs
-foaming
-heart
-heat
-in
-in
-in
-lions
-longestwordforsure
-of
-rabid
-roaming
-street
-the
-the
+The first word alphabetically is "a".
+The last word alphabetically is "the".
+The longest word is "ghghghghghghghghghgghghghg".
+The word with the most vowels is "aaaaaaaaaaaaaaaaaaa".

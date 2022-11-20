@@ -35,7 +35,7 @@
             this.statusLabel = new System.Windows.Forms.Label();
             this.processButton = new System.Windows.Forms.Button();
             this.firstAlphaLabel = new System.Windows.Forms.Label();
-            this.lastAlphaWord = new System.Windows.Forms.Label();
+            this.lastAlphaLabel = new System.Windows.Forms.Label();
             this.firstAlphaTextBox = new System.Windows.Forms.TextBox();
             this.lastAlphaTextBox = new System.Windows.Forms.TextBox();
             this.longestLabel = new System.Windows.Forms.Label();
@@ -118,15 +118,15 @@
             this.firstAlphaLabel.TabIndex = 5;
             this.firstAlphaLabel.Text = "First Alphabetical Word";
             // 
-            // lastAlphaWord
+            // lastAlphaLabel
             // 
-            this.lastAlphaWord.AutoSize = true;
-            this.lastAlphaWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lastAlphaWord.Location = new System.Drawing.Point(76, 410);
-            this.lastAlphaWord.Name = "lastAlphaWord";
-            this.lastAlphaWord.Size = new System.Drawing.Size(183, 20);
-            this.lastAlphaWord.TabIndex = 6;
-            this.lastAlphaWord.Text = "Last Alphabetical Word";
+            this.lastAlphaLabel.AutoSize = true;
+            this.lastAlphaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lastAlphaLabel.Location = new System.Drawing.Point(76, 410);
+            this.lastAlphaLabel.Name = "lastAlphaLabel";
+            this.lastAlphaLabel.Size = new System.Drawing.Size(183, 20);
+            this.lastAlphaLabel.TabIndex = 6;
+            this.lastAlphaLabel.Text = "Last Alphabetical Word";
             // 
             // firstAlphaTextBox
             // 
@@ -218,7 +218,7 @@
             this.Controls.Add(this.longestLabel);
             this.Controls.Add(this.lastAlphaTextBox);
             this.Controls.Add(this.firstAlphaTextBox);
-            this.Controls.Add(this.lastAlphaWord);
+            this.Controls.Add(this.lastAlphaLabel);
             this.Controls.Add(this.firstAlphaLabel);
             this.Controls.Add(this.processButton);
             this.Controls.Add(this.statusLabel);
@@ -241,7 +241,7 @@
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Button processButton;
         private System.Windows.Forms.Label firstAlphaLabel;
-        private System.Windows.Forms.Label lastAlphaWord;
+        private System.Windows.Forms.Label lastAlphaLabel;
         private System.Windows.Forms.TextBox firstAlphaTextBox;
         private System.Windows.Forms.TextBox lastAlphaTextBox;
         private System.Windows.Forms.Label longestLabel;
