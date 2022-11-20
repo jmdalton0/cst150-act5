@@ -38,6 +38,11 @@
             this.lastAlphaWord = new System.Windows.Forms.Label();
             this.firstAlphaTextBox = new System.Windows.Forms.TextBox();
             this.lastAlphaTextBox = new System.Windows.Forms.TextBox();
+            this.longestLabel = new System.Windows.Forms.Label();
+            this.mostVowelsLabel = new System.Windows.Forms.Label();
+            this.longestTextBox = new System.Windows.Forms.TextBox();
+            this.mostVowelsTextBox = new System.Windows.Forms.TextBox();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openFileLabel
@@ -82,7 +87,7 @@
             // 
             this.statusLabel.AutoSize = true;
             this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.statusLabel.Location = new System.Drawing.Point(308, 278);
+            this.statusLabel.Location = new System.Drawing.Point(334, 278);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(105, 20);
             this.statusLabel.TabIndex = 3;
@@ -129,7 +134,7 @@
             this.firstAlphaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.firstAlphaTextBox.Enabled = false;
             this.firstAlphaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.firstAlphaTextBox.Location = new System.Drawing.Point(312, 356);
+            this.firstAlphaTextBox.Location = new System.Drawing.Point(338, 356);
             this.firstAlphaTextBox.Name = "firstAlphaTextBox";
             this.firstAlphaTextBox.Size = new System.Drawing.Size(328, 26);
             this.firstAlphaTextBox.TabIndex = 7;
@@ -140,17 +145,77 @@
             this.lastAlphaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lastAlphaTextBox.Enabled = false;
             this.lastAlphaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lastAlphaTextBox.Location = new System.Drawing.Point(312, 408);
+            this.lastAlphaTextBox.Location = new System.Drawing.Point(338, 408);
             this.lastAlphaTextBox.Name = "lastAlphaTextBox";
             this.lastAlphaTextBox.Size = new System.Drawing.Size(328, 26);
             this.lastAlphaTextBox.TabIndex = 8;
+            // 
+            // longestLabel
+            // 
+            this.longestLabel.AutoSize = true;
+            this.longestLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.longestLabel.Location = new System.Drawing.Point(76, 461);
+            this.longestLabel.Name = "longestLabel";
+            this.longestLabel.Size = new System.Drawing.Size(114, 20);
+            this.longestLabel.TabIndex = 9;
+            this.longestLabel.Text = "Longest Word";
+            // 
+            // mostVowelsLabel
+            // 
+            this.mostVowelsLabel.AutoSize = true;
+            this.mostVowelsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.mostVowelsLabel.Location = new System.Drawing.Point(76, 510);
+            this.mostVowelsLabel.Name = "mostVowelsLabel";
+            this.mostVowelsLabel.Size = new System.Drawing.Size(213, 20);
+            this.mostVowelsLabel.TabIndex = 10;
+            this.mostVowelsLabel.Text = "Word with the Most Vowels";
+            // 
+            // longestTextBox
+            // 
+            this.longestTextBox.BackColor = System.Drawing.Color.White;
+            this.longestTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.longestTextBox.Enabled = false;
+            this.longestTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.longestTextBox.Location = new System.Drawing.Point(338, 459);
+            this.longestTextBox.Name = "longestTextBox";
+            this.longestTextBox.Size = new System.Drawing.Size(328, 26);
+            this.longestTextBox.TabIndex = 11;
+            // 
+            // mostVowelsTextBox
+            // 
+            this.mostVowelsTextBox.BackColor = System.Drawing.Color.White;
+            this.mostVowelsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mostVowelsTextBox.Enabled = false;
+            this.mostVowelsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.mostVowelsTextBox.Location = new System.Drawing.Point(338, 508);
+            this.mostVowelsTextBox.Name = "mostVowelsTextBox";
+            this.mostVowelsTextBox.Size = new System.Drawing.Size(328, 26);
+            this.mostVowelsTextBox.TabIndex = 12;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(845, 482);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(119, 52);
+            this.closeButton.TabIndex = 13;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // WordStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(232)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1085, 693);
+            this.ClientSize = new System.Drawing.Size(1085, 603);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.mostVowelsTextBox);
+            this.Controls.Add(this.longestTextBox);
+            this.Controls.Add(this.mostVowelsLabel);
+            this.Controls.Add(this.longestLabel);
             this.Controls.Add(this.lastAlphaTextBox);
             this.Controls.Add(this.firstAlphaTextBox);
             this.Controls.Add(this.lastAlphaWord);
@@ -179,5 +244,10 @@
         private System.Windows.Forms.Label lastAlphaWord;
         private System.Windows.Forms.TextBox firstAlphaTextBox;
         private System.Windows.Forms.TextBox lastAlphaTextBox;
+        private System.Windows.Forms.Label longestLabel;
+        private System.Windows.Forms.Label mostVowelsLabel;
+        private System.Windows.Forms.TextBox longestTextBox;
+        private System.Windows.Forms.TextBox mostVowelsTextBox;
+        private System.Windows.Forms.Button closeButton;
     }
 }
