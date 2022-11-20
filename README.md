@@ -8,6 +8,7 @@ Video Presentation of activity:
 Screenshots available in 
 [/gcu/img/](https://github.com/jmdalton0/cst150-act5/tree/main/gcu/img)
 
+### Word Statistics
 Simple Windows Form Application to read text from a file and display statistical data about the words.
 
 Statistics Displayed:
@@ -16,3 +17,7 @@ Statistics Displayed:
 - longest word
 - word with most vowels
 
+### What I learned
+While coding this project, I ran into a bug where the last word of the file was sometimes not read. I realiazed that it depended on whether the file ended in whitespace or not. The process I used to save each word depended on reaching a character that was not considered a letter (typically a space) and saving the current running word. But if the last character of the file was a letter, then the final word would not be saved. I fixed this bug by appending a newline character to the end of the file before reading the words. This gauranteed that the file ended in a non-letter character and ensured that the last letter was read.
+
+I also learned that you can programatically change control properties like color and enabled to help with UX.
